@@ -22,7 +22,7 @@ public class GiroMoneda : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            GameObject.FindWithTag("GameController").GetComponent<GameController>().numberTreasure++;
+            GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>().numberTreasure++;
             gameObject.SetActive(false);
         }
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class GameController : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
     
     public enum estados
@@ -10,9 +10,10 @@ public class GameController : MonoBehaviour
         loading,commands,playing,paused,finish
     }
     public estados states;
-
+    public int lives;
+    public TMP_Text livesText;
     public GameObject [] tesoro;
-    public GameObject jugador;
+    private GameObject jugador;
     public int maxTreasure;
     public int maxMovements;
     public int numberMovements;
@@ -32,6 +33,10 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        jugador=Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, new Vector3(0, 1, 0), Quaternion.identity);
+        //jugador = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters;
+       
         posicionInicial = jugador.transform.position;
         rotacionInicial = jugador.transform.rotation;
         maxTreasure = tesoro.Length;
@@ -58,6 +63,7 @@ public class GameController : MonoBehaviour
                 ejecutar = false;
                 final = false;
                 movement = "";
+                livesText.text = lives.ToString();
                 states = estados.commands;
                 break;
             case estados.commands:
@@ -100,6 +106,7 @@ public class GameController : MonoBehaviour
             case estados.paused:
                 break;
             case estados.finish:
+                //TODO: Realziar un condicional para ganar o perder
                 Debug.Log("Ganaste");
                 break;
             default:
@@ -208,7 +215,17 @@ public class GameController : MonoBehaviour
 
     public void Death()
     {
-        states = estados.loading;
+        lives--;
+        livesText.text = lives.ToString();
+        if (lives != 0)
+        {
+            states = estados.loading;
+        }
+        else 
+        {
+            states = estados.finish;
+        }
+        
     }
     
 }

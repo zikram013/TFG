@@ -8,7 +8,7 @@ public class Muerte : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            GameObject.FindWithTag("GameController").GetComponent<GameController>().Death();
+            GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>().Death();
         }
     }
 }

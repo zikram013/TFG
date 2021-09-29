@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tesoro
   - Mapa
+  - LevelManager
   layers:
   - Default
   - TransparentFX

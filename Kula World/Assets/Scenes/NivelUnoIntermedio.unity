@@ -469,7 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states: 0
   tesoro: []
-  jugador: {fileID: 0}
+  jugador: {fileID: 1755426847}
   maxTreasure: 0
   maxMovements: 9
   numberMovements: 0
