@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 49986001}
   - component: {fileID: 49986000}
   m_Layer: 0
-  m_Name: Muette
+  m_Name: Muerte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
