@@ -15,11 +15,11 @@ D:/repositorios/multimedia/TFG/Kula World
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62159
+49969
 Successfully changed project path to: D:/repositorios/multimedia/TFG/Kula World
 D:/repositorios/multimedia/TFG/Kula World
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 25.04 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 38.02 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
@@ -30,12 +30,12 @@ Direct3D:
     Renderer: NVIDIA GeForce GTX 1070 (ID=0x1ba1)
     Vendor:   
     VRAM:     8082 MB
-    Driver:   30.0.14.9613
+    Driver:   30.0.14.9649
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56448
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56672
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -43,22 +43,22 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/E
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.002778 seconds.
+Registered in 0.366992 seconds.
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 22.76 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 24.04 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.883 seconds
+- Completed reload, in  4.879 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000449 seconds.
+Registered in 0.047374 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
@@ -71,68 +71,169 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.791 seconds
+- Completed reload, in  1.883 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 59.7 MB.
 System memory in use after: 59.8 MB.
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1585.
-Total: 1.728700 ms (FindLiveObjects: 0.136600 ms CreateObjectMapping: 0.040600 ms MarkObjects: 1.530100 ms  DeleteObjects: 0.020600 ms)
+Total: 1.567600 ms (FindLiveObjects: 0.121000 ms CreateObjectMapping: 0.030600 ms MarkObjects: 1.393900 ms  DeleteObjects: 0.021300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Dificil/NivelUnoDificil.unity
-  artifactKey: Guid(bf5f3d11aa9d98a469e4354f338a48ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dificil/NivelUnoDificil.unity using Guid(bf5f3d11aa9d98a469e4354f338a48ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c54f77f08fff34d9cb1b0e9d8c8ce9a') in 0.010719 seconds
-  Import took 0.012458 seconds .
+  path: Assets/Scenes/Dificil/NivelDosDificil.unity
+  artifactKey: Guid(d6bd7abe20f5a7747b4e9479d9465364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Dificil/NivelDosDificil.unity using Guid(d6bd7abe20f5a7747b4e9479d9465364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97f4614dbeb73a878e47e2c7e311ad6c') in 0.017969 seconds
+  Import took 0.019698 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 649.494569 seconds.
+  Time since last request: 0.000323 seconds.
   path: Assets/Scenes/Dificil/NivelTresDificil.unity
   artifactKey: Guid(70b5ab2ccc433b44393da53762cb9ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dificil/NivelTresDificil.unity using Guid(70b5ab2ccc433b44393da53762cb9ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5954d65052102dd9c88ab49b996ca55') in 0.008929 seconds
-  Import took 0.011083 seconds .
+Start importing Assets/Scenes/Dificil/NivelTresDificil.unity using Guid(70b5ab2ccc433b44393da53762cb9ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb17177497ecadcf9ab609d652c482b9') in 0.009201 seconds
+  Import took 0.135856 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 807.582370 seconds.
-  path: Assets/Scenes/Dificil/NivelUnoDificil.unity
-  artifactKey: Guid(bf5f3d11aa9d98a469e4354f338a48ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dificil/NivelUnoDificil.unity using Guid(bf5f3d11aa9d98a469e4354f338a48ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21e93936305b139abd456c76f411e384') in 0.003443 seconds
-  Import took 0.093901 seconds .
+  Time since last request: 61.104290 seconds.
+  path: Assets/Scenes/Dificil/NivelDosDificil.unity
+  artifactKey: Guid(d6bd7abe20f5a7747b4e9479d9465364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Dificil/NivelDosDificil.unity using Guid(d6bd7abe20f5a7747b4e9479d9465364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '707f6c0938871656ae9f2895dcc0cd1f') in 0.004148 seconds
+  Import took 0.006198 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000543 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.925 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1119 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.0 MB.
-System memory in use after: 59.1 MB.
+Received Import Request.
+  Time since last request: 609.450832 seconds.
+  path: Assets/Scripts/Player/LevelManager.cs
+  artifactKey: Guid(4a012606b33053448ab669d6edbce7e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/LevelManager.cs using Guid(4a012606b33053448ab669d6edbce7e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c94fbacd5b3b77f25523760665a76e79') in 0.039253 seconds
+  Import took 0.041384 seconds .
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1587.
-Total: 1.762500 ms (FindLiveObjects: 0.150900 ms CreateObjectMapping: 0.036700 ms MarkObjects: 1.559700 ms  DeleteObjects: 0.013600 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 670.831612 seconds.
+  path: Assets/Scenes/Intermedio/NivelDosIntermedio.unity
+  artifactKey: Guid(9c1d13d4b1cee0149a0f0adbdca45ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Intermedio/NivelDosIntermedio.unity using Guid(9c1d13d4b1cee0149a0f0adbdca45ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5355d4338c8b9302c517d3bdcbfb845') in 0.008295 seconds
+  Import took 0.010690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.236809 seconds.
+  path: Assets/Scenes/Intermedio/NivelTresIntermedio.unity
+  artifactKey: Guid(a2f7cebcc0c4e894dabbfaf55c350dc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Intermedio/NivelTresIntermedio.unity using Guid(a2f7cebcc0c4e894dabbfaf55c350dc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be6635e49324497f3b9312b52e86b3a5') in 0.009388 seconds
+  Import took 0.011168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.828960 seconds.
+  path: Assets/Scenes/Principiante/NivelDosPrincipiante.unity
+  artifactKey: Guid(1bdd4a45bc3ca6a46a2b924d2263096f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Principiante/NivelDosPrincipiante.unity using Guid(1bdd4a45bc3ca6a46a2b924d2263096f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be921ad6c07172704ba6ec0e5e5fb20a') in 0.009164 seconds
+  Import took 0.010966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.832020 seconds.
+  path: Assets/Scenes/Principiante/NivelTresPrincipiante.unity
+  artifactKey: Guid(a02a347b00d2a7146abe5ce26f75ce5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Principiante/NivelTresPrincipiante.unity using Guid(a02a347b00d2a7146abe5ce26f75ce5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d38e3a3171841feac17dd483c946a2a') in 0.010261 seconds
+  Import took 0.021271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 500.800908 seconds.
+  path: Assets/Scenes/Intermedio/NivelDosIntermedio.unity
+  artifactKey: Guid(9c1d13d4b1cee0149a0f0adbdca45ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Intermedio/NivelDosIntermedio.unity using Guid(9c1d13d4b1cee0149a0f0adbdca45ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6369529a2dbff35616130a6e3c0c3fdb') in 0.003307 seconds
+  Import took 0.005847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.725188 seconds.
+  path: Assets/Scenes/Intermedio/NivelTresIntermedio.unity
+  artifactKey: Guid(a2f7cebcc0c4e894dabbfaf55c350dc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Intermedio/NivelTresIntermedio.unity using Guid(a2f7cebcc0c4e894dabbfaf55c350dc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '708027099d53f1214bb24de6d4ccf918') in 0.004530 seconds
+  Import took 0.007078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000522 seconds.
+  path: Assets/Scenes/Intermedio/NivelTresIntermedio.unity
+  artifactKey: Guid(a2f7cebcc0c4e894dabbfaf55c350dc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Intermedio/NivelTresIntermedio.unity using Guid(a2f7cebcc0c4e894dabbfaf55c350dc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '708027099d53f1214bb24de6d4ccf918') in 0.004130 seconds
+  Import took 0.006216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.515001 seconds.
+  path: Assets/Scenes/Intermedio/NivelUnoIntermedio.unity
+  artifactKey: Guid(1318415381037cc439b2aebd20eab380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Intermedio/NivelUnoIntermedio.unity using Guid(1318415381037cc439b2aebd20eab380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '198372d0ed0632ae630f70336beb1298') in 0.010569 seconds
+  Import took 0.012319 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.984638 seconds.
+  path: Assets/Scenes/Dificil/NivelUnoDificil.unity
+  artifactKey: Guid(bf5f3d11aa9d98a469e4354f338a48ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Dificil/NivelUnoDificil.unity using Guid(bf5f3d11aa9d98a469e4354f338a48ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4e5395277c40e2e1b0e871ed419aa98') in 0.101244 seconds
+  Import took 0.102969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.923075 seconds.
+  path: Assets/Scenes/Dificil/NivelTresDificil.unity
+  artifactKey: Guid(70b5ab2ccc433b44393da53762cb9ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Dificil/NivelTresDificil.unity using Guid(70b5ab2ccc433b44393da53762cb9ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2174c7965369111492d8b87077aa74fd') in 0.004259 seconds
+  Import took 0.007016 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1045.720650 seconds.
+  path: Assets/Scenes/Principiante/NivelDosPrincipiante.unity
+  artifactKey: Guid(1bdd4a45bc3ca6a46a2b924d2263096f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Principiante/NivelDosPrincipiante.unity using Guid(1bdd4a45bc3ca6a46a2b924d2263096f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7f05a3b422a0c1a151d23e55badf72b') in 0.003740 seconds
+  Import took 0.005981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.963056 seconds.
+  path: Assets/Scenes/Principiante/NivelUnoPrincipiante.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Principiante/NivelUnoPrincipiante.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eeca383fc881329fb65688e1480838c') in 0.009647 seconds
+  Import took 0.012118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.699146 seconds.
+  path: Assets/Scenes/Principiante/NivelDosPrincipiante.unity
+  artifactKey: Guid(1bdd4a45bc3ca6a46a2b924d2263096f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Principiante/NivelDosPrincipiante.unity using Guid(1bdd4a45bc3ca6a46a2b924d2263096f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcdafe0779a74cd0be945139df2d0a82') in 0.004342 seconds
+  Import took 0.006298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.433263 seconds.
+  path: Assets/Scenes/Principiante/NivelUnoPrincipiante.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Principiante/NivelUnoPrincipiante.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c5c94981c710a95ba470b6364f647ab') in 0.003888 seconds
+  Import took 0.005918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 554.069080 seconds.
+  path: Assets/Scenes/Principiante/NivelTresPrincipiante.unity
+  artifactKey: Guid(a02a347b00d2a7146abe5ce26f75ce5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Principiante/NivelTresPrincipiante.unity using Guid(a02a347b00d2a7146abe5ce26f75ce5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '187bdbc9b5ffbfffc3161cd896adce8d') in 0.003042 seconds
+  Import took 0.005355 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
