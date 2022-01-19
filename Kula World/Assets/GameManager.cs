@@ -32,6 +32,7 @@ private void Awake()
 
     public void selectCharacter(int character) 
     {
+        Debug.Log(character);
         characters = listCharacters[character];
         Debug.Log("characeter select is: " + characters.name);
     }

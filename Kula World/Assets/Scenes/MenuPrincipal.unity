@@ -1023,9 +1023,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters: {fileID: 0}
   listCharacters:
-  - {fileID: 443848168640383415, guid: c014214223979c64a8e70cd418baf5b1, type: 3}
-  - {fileID: 443848168640383415, guid: ca94c587e0dc92d488b817cbe6a0db11, type: 3}
-  - {fileID: 443848168640383415, guid: f29fbb190a7c1434282a3239fc163329, type: 3}
+  - {fileID: 106736, guid: ce387ada46ad8354283b74964993eb80, type: 3}
+  - {fileID: 166016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+  - {fileID: 175374, guid: 8280ad2f586477b47ac0d3d3e444e3aa, type: 3}
 --- !u!4 &1232902727
 Transform:
   m_ObjectHideFlags: 0
