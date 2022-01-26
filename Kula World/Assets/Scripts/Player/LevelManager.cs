@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class LevelManager : MonoBehaviour
 {
     
@@ -34,7 +36,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
 
-        jugador=Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, new Vector3(0, 1, 2), Quaternion.EulerAngles(0,360,0));
+        jugador=Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, new Vector3(0, 1, -2), Quaternion.EulerAngles(0,360,0));
         //jugador = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters;
        
         posicionInicial = jugador.transform.position;
@@ -94,7 +96,7 @@ public class LevelManager : MonoBehaviour
                 }
                 else
                 {
-
+                    //Death();
                 }
                 if (size == numberMovements)
                 {
@@ -108,6 +110,7 @@ public class LevelManager : MonoBehaviour
             case estados.finish:
                 //TODO: Realziar un condicional para ganar o perder
                 Debug.Log("Ganaste");
+                SceneManager.LoadScene("MenuPrincipal");
                 break;
             default:
                 break;
@@ -217,6 +220,7 @@ public class LevelManager : MonoBehaviour
     {
         lives--;
         livesText.text = lives.ToString();
+       
         if (lives != 0)
         {
             states = estados.loading;
