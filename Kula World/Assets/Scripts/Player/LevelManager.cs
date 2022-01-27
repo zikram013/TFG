@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     
     public enum estados
     {
-        loading,commands,playing,paused,finish
+        loading,commands,playing,paused,finish,quit
     }
     public estados states;
     public int lives;
@@ -21,6 +21,9 @@ public class LevelManager : MonoBehaviour
     public int numberMovements;
     public int numberTreasure;
     public TMP_Text textoComandos;
+    public GameObject botonPausa;
+    public GameObject menuPausa;
+    public GameObject mapeado;
 
     private Vector3 posicionInicial;
     private Quaternion rotacionInicial;
@@ -30,6 +33,7 @@ public class LevelManager : MonoBehaviour
     private string movement = "";
     private bool flag = true;
     private bool final = false;
+    private bool dead = false;
 
 
     // Start is called before the first frame update
@@ -67,6 +71,7 @@ public class LevelManager : MonoBehaviour
                 movement = "";
                 livesText.text = lives.ToString();
                 states = estados.commands;
+                dead = false;
                 break;
             case estados.commands:
 
@@ -79,14 +84,16 @@ public class LevelManager : MonoBehaviour
 
                 break;
             case estados.playing:
-                
+
+               
+
                 if (size < listMove.Length - 1)
                 {
                     if (flag)
                     {
                         flag = false;
                         StartCoroutine(movimiento(listMove[size]));
-                        
+  
                     }
                 }
 
@@ -97,6 +104,14 @@ public class LevelManager : MonoBehaviour
                 else
                 {
                     //Death();
+                    if (numberTreasure < maxTreasure) 
+                    {
+                        Death();
+                        if (lives == 0) 
+                        {
+                            dead = true;
+                        }
+                    }
                 }
                 if (size == numberMovements)
                 {
@@ -109,7 +124,20 @@ public class LevelManager : MonoBehaviour
                 break;
             case estados.finish:
                 //TODO: Realziar un condicional para ganar o perder
-                Debug.Log("Ganaste");
+                if (dead)
+                {
+                    Debug.Log("Perdiste");
+                    SceneManager.LoadScene("MenuPrincipal");
+                }
+                else 
+                { 
+                    Debug.Log("Ganaste");
+                    SceneManager.LoadScene("MenuPrincipal");
+                }
+               
+                break;
+
+            case estados.quit:
                 SceneManager.LoadScene("MenuPrincipal");
                 break;
             default:
@@ -144,11 +172,12 @@ public class LevelManager : MonoBehaviour
             Debug.Log(destino);
 
             jugador.transform.position = destino;
-            
+
         }
 
         
-        yield return new WaitForSeconds(1f);
+        
+        yield return new WaitForSeconds(1000);
         size++;
 
 
@@ -225,11 +254,39 @@ public class LevelManager : MonoBehaviour
         {
             states = estados.loading;
         }
-        else 
+        else
         {
             states = estados.finish;
         }
         
     }
-    
+
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        botonPausa.SetActive(false);
+        menuPausa.SetActive(true);
+        Debug.Log("Juego Pausado");
+    }
+
+
+    public void Resume() 
+    {
+        Time.timeScale = 1f;
+        botonPausa.SetActive(true);
+        menuPausa.SetActive(false);
+
+    }
+
+    public void Restart() 
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        botonPausa.SetActive(true);
+        menuPausa.SetActive(false);
+    }
+
+    public void Quit()
+    {
+        states = estados.quit;
+    }
 }
