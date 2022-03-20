@@ -1910,6 +1910,7 @@ GameObject:
   - component: {fileID: 1551005051}
   - component: {fileID: 1551005050}
   - component: {fileID: 1551005049}
+  - component: {fileID: 1551005054}
   m_Layer: 5
   m_Name: Box
   m_TagString: Untagged
@@ -2035,6 +2036,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!111 &1551005054
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551005047}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 35e4e77c0bcc63141bac101ab15df8e3, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 35e4e77c0bcc63141bac101ab15df8e3, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1889138021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,6 +2699,7 @@ GameObject:
   - component: {fileID: 2062076467}
   - component: {fileID: 2062076466}
   - component: {fileID: 2062076469}
+  - component: {fileID: 2062076470}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2827,3 +2845,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77276f7a7217d847be1a89c04035e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &2062076470
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062076464}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 35e4e77c0bcc63141bac101ab15df8e3, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 35e4e77c0bcc63141bac101ab15df8e3, type: 2}
+  m_WrapMode: 2
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
