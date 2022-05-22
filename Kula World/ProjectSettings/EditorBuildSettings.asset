@@ -14,4 +14,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterSelection.unity
     guid: 4e04b34859e39bc4d94bf8e23e3e598c
+  - enabled: 1
+    path: Assets/Scenes/Opciones.unity
+    guid: b71621042117e1242b64cbebaae37842
+  - enabled: 1
+    path: Assets/Scenes/LevelSelection.unity
+    guid: 21d200c7917bcec429834d62539aff89
+  - enabled: 1
+    path: Assets/Scenes/Principiante/NivelDosPrincipiante.unity
+    guid: 1bdd4a45bc3ca6a46a2b924d2263096f
+  - enabled: 1
+    path: Assets/Scenes/Intermedio/NivelUnoIntermedio.unity
+    guid: 1318415381037cc439b2aebd20eab380
+  - enabled: 1
+    path: Assets/Scenes/Intermedio/NivelTresIntermedio.unity
+    guid: a2f7cebcc0c4e894dabbfaf55c350dc7
+  - enabled: 1
+    path: Assets/Scenes/Intermedio/NivelDosIntermedio.unity
+    guid: 9c1d13d4b1cee0149a0f0adbdca45ce2
+  - enabled: 1
+    path: Assets/Scenes/Principiante/NivelTresPrincipiante.unity
+    guid: a02a347b00d2a7146abe5ce26f75ce5d
+  - enabled: 1
+    path: Assets/Scenes/Dificil/NivelUnoDificil.unity
+    guid: bf5f3d11aa9d98a469e4354f338a48ac
+  - enabled: 1
+    path: Assets/Scenes/Dificil/NivelTresDificil.unity
+    guid: 70b5ab2ccc433b44393da53762cb9ed2
+  - enabled: 1
+    path: Assets/Scenes/Dificil/NivelDosDificil.unity
+    guid: d6bd7abe20f5a7747b4e9479d9465364
   m_configObjects: {}

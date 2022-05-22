@@ -7,9 +7,27 @@ public class GameManager : MonoBehaviour
 {
     public GameObject characters;
     public List<GameObject> listCharacters = new List<GameObject>();
-    
-private void Awake()
+
+    //private AudioSource sonidoEscenas;
+ 
+
+    private void Awake()
     {
+        //if (FindObjectsOfType(GetType()).Length > 1)
+        //{
+        //    Destroy(gameObject);
+        //}
+
+        //if (sonidoEscenas != null && sonidoEscenas != this)
+        //{
+        //    Destroy(gameObject);
+        //    return;
+        //}
+        //else
+        //{
+        //    sonidoEscenas = sonidoEscenas;
+        //}
+
         DontDestroyOnLoad(this.gameObject);
         
     }
@@ -36,4 +54,6 @@ private void Awake()
         characters = listCharacters[character];
         Debug.Log("characeter select is: " + characters.name);
     }
+
+
 }
