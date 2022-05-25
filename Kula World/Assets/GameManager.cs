@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public GameObject characters;
     public List<GameObject> listCharacters = new List<GameObject>();
 
-    //private AudioSource sonidoEscenas;
  
 
     private void Awake()

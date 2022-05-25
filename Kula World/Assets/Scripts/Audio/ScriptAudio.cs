@@ -2,21 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ScriptAudio : MonoBehaviour
 {
 
-    private ScriptAudio sonidoEscenas;
-    private ScriptAudio Instance 
-    {
-        get 
-        {
-           return sonidoEscenas;
-        }
-    }
+    private AudioSource sonidoEscenas;
+
+    public static ScriptAudio Instance { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        sonidoEscenas = new AudioSource(); 
     }
 
     // Update is called once per frame
@@ -37,23 +34,22 @@ public class ScriptAudio : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        else 
-        {
-            sonidoEscenas = this;
-        }
+
         DontDestroyOnLoad(gameObject);
     }
 
-    //public void MusicController() 
-    //{
-    //    if (sonidoEscenas.isPlaying) 
-    //    {
-    //        sonidoEscenas.Stop();
-    //    }
+    public void MusicController()
+    {
+        Debug.Log("entro en el controller");
 
-    //    if (!sonidoEscenas.isPlaying) 
-    //    {
-    //        sonidoEscenas.Play();
-    //    }
-    //}
+        if (sonidoEscenas.isPlaying)
+        {
+            sonidoEscenas.Stop();
+        }
+
+        if (!sonidoEscenas.isPlaying)
+        {
+            sonidoEscenas.Play();
+        }
+    }
 }
