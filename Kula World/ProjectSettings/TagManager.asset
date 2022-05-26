@@ -8,6 +8,8 @@ TagManager:
   - Mapa
   - LevelManager
   - Audio
+  - Idioma
+  - TextoIdioma
   layers:
   - Default
   - TransparentFX

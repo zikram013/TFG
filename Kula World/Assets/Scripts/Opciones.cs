@@ -8,6 +8,8 @@ public class Opciones : MonoBehaviour
 {
 
     private AudioSource Audio;
+    
+
 
     //Botones de audio
     public GameObject botonMusicaOn;
@@ -21,7 +23,10 @@ public class Opciones : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Posiblemente toque buscar todos si queremos quitar la musica del nivel
         Audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
+
+
     }
 
     // Update is called once per frame
@@ -35,37 +40,7 @@ public class Opciones : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
-    //public void MusicController()
-    //{
-    //    if (Audio.isPlaying)
-    //    {
-    //        if (textoMusica.name == "AudioNo")
-    //        {
-    //            textoMusica.SetActive(false);
-
-    //        }
-    //        if (textoMusica.name == "AudioSi")
-    //        {
-    //            textoMusica.SetActive(true);
-    //        }
-    //        Audio.Stop();
-
-    //    }
-    //    else 
-    //    {
-    //        if (textoMusica.name == "AudioSi")
-    //        {
-    //            textoMusica.SetActive(false);
-
-    //        }
-    //        if (textoMusica.name == "AudioNo")
-    //        {
-    //            textoMusica.SetActive(true);
-    //        }
-    //        Audio.Play();
-    //    }
-           
-    //}
+  
 
     //Add encender o apagar la musica
     public void controlBotonVolumen() 
@@ -92,6 +67,7 @@ public class Opciones : MonoBehaviour
         if (botonIdiomaING.activeSelf)
         {
             botonIdiomaING.SetActive(false);
+            
             botonIdiomaESP.SetActive(true);
         }
         else 

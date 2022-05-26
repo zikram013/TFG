@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,24 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject characters;
     public List<GameObject> listCharacters = new List<GameObject>();
 
- 
-
     private void Awake()
     {
-        //if (FindObjectsOfType(GetType()).Length > 1)
-        //{
-        //    Destroy(gameObject);
-        //}
-
-        //if (sonidoEscenas != null && sonidoEscenas != this)
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
-        //else
-        //{
-        //    sonidoEscenas = sonidoEscenas;
-        //}
 
         DontDestroyOnLoad(this.gameObject);
         
