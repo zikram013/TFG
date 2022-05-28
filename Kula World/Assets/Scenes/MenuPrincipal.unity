@@ -335,6 +335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e72aa65896fff439bd706564398c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IdiomaGlobal: {fileID: 0}
+  game: {fileID: 1232902726}
+  "espa\xF1ol": 
+  ingles: 
+  isBoton: 0
 --- !u!114 &645079839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,10 +867,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d098a904471384ba09e45b0c075828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingles: 1
-  textoIngles: []
-  textoEspanol: []
-  textos: []
+  BotonIdiomaESP: {fileID: 0}
+  BotonIdiomaING: {fileID: 0}
+  idiomaActual: "Espa\xF1ol"
 --- !u!1 &1077502241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,6 +1982,7 @@ GameObject:
   - component: {fileID: 1847277453}
   - component: {fileID: 1847277452}
   - component: {fileID: 1847277451}
+  - component: {fileID: 1847277454}
   m_Layer: 5
   m_Name: Opciones
   m_TagString: Untagged
@@ -2099,3 +2104,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847277449}
   m_CullTransparentMesh: 1
+--- !u!114 &1847277454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847277449}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "espa\xF1ol": Opciones
+  ingles: Options
+  isBoton: 1
+  IdiomaGlobal: {fileID: 0}

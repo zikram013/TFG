@@ -8,7 +8,8 @@ public class Opciones : MonoBehaviour
 {
 
     private AudioSource Audio;
-    
+
+    private Canvas canvas;
 
 
     //Botones de audio
@@ -25,7 +26,7 @@ public class Opciones : MonoBehaviour
     {
         //Posiblemente toque buscar todos si queremos quitar la musica del nivel
         Audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
-
+        canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>(); ;
 
     }
 
@@ -37,7 +38,9 @@ public class Opciones : MonoBehaviour
 
     public void LoadLevel(string name)
     {
+        canvas.gameObject.SetActive(false);
         SceneManager.LoadScene(name);
+        
     }
 
   

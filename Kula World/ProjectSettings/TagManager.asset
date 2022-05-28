@@ -10,6 +10,7 @@ TagManager:
   - Audio
   - Idioma
   - TextoIdioma
+  - Canvas
   layers:
   - Default
   - TransparentFX

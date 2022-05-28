@@ -1,3 +1,4 @@
+using NotificationCenter;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,11 +8,12 @@ using UnityEngine.UI;
 
 public class Idioma : MonoBehaviour
 {
-
-    public string idiomaActual = "Español";
+    public GameObject BotonIdiomaESP;
+    public GameObject BotonIdiomaING;
+    public  string idiomaActual = "Español";
     private void Start()
     {
-        
+        CambiarIdioma(idiomaActual);
     }
 
     private void Update()
@@ -24,8 +26,17 @@ public class Idioma : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
+    public string RetornaIdioma() 
+    {
+        return (idiomaActual);
+    }
+
     public void CambiarIdioma(string idioma) 
     {
+        Debug.Log(idioma);
         idiomaActual = idioma;
+        Notification notification = new Notification(this, idioma);
+        NotificationCenterManager.Instance.PostNotification("CambiarIdioma_", notification);
+        //NotificationCenter.NotificationCenterManager.Instance.PostNotification("CambiarIdioma_");
     }
 }
