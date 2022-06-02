@@ -10,9 +10,10 @@ public class Idioma : MonoBehaviour
 {
     public GameObject BotonIdiomaESP;
     public GameObject BotonIdiomaING;
-    public  string idiomaActual = "Español";
+    private static string idiomaActual = "Español";
     private void Start()
     {
+        
         CambiarIdioma(idiomaActual);
     }
 
@@ -23,7 +24,11 @@ public class Idioma : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        if (this.gameObject.activeSelf == true) 
+        {
+            DontDestroyOnLoad(transform.gameObject);
+        } 
+        
     }
 
     public string RetornaIdioma() 

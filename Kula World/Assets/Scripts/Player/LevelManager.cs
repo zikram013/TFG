@@ -4,17 +4,18 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 public class LevelManager : MonoBehaviour
 {
-    
+
     public enum estados
     {
-        loading,commands,playing,paused,finish,quit
+        loading, commands, playing, paused, finish, quit
     }
     public estados states;
     public int lives;
     public TMP_Text livesText;
-    public GameObject [] tesoro;
+    public GameObject[] tesoro;
     private GameObject jugador;
     public int maxTreasure;
     public int maxMovements;
@@ -29,7 +30,7 @@ public class LevelManager : MonoBehaviour
     private Quaternion rotacionInicial;
     private string[] listMove;
     private int size = 0;
-    private bool ejecutar=false;
+    private bool ejecutar = false;
     private string movement = "";
     private bool flag = true;
     private bool final = false;
@@ -40,9 +41,9 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
 
-        jugador=Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, new Vector3(0, 1, -2), Quaternion.EulerAngles(0,360,0));
+        jugador = Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, new Vector3(0, 1, -2), Quaternion.EulerAngles(0, 360, 0));
         //jugador = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters;
-       
+
         posicionInicial = jugador.transform.position;
         rotacionInicial = jugador.transform.rotation;
         maxTreasure = tesoro.Length;
@@ -55,7 +56,7 @@ public class LevelManager : MonoBehaviour
         switch (states)
         {
             case estados.loading:
-                foreach(GameObject tes in tesoro)
+                foreach (GameObject tes in tesoro)
                 {
                     tes.SetActive(true);
                 }
@@ -80,12 +81,12 @@ public class LevelManager : MonoBehaviour
                     size = 0;
                     listMove = movement.Split(',');
                     states = estados.playing;
-                }   
+                }
 
                 break;
             case estados.playing:
 
-               
+
 
                 if (size < listMove.Length - 1)
                 {
@@ -93,21 +94,21 @@ public class LevelManager : MonoBehaviour
                     {
                         flag = false;
                         StartCoroutine(movimiento(listMove[size]));
-  
+
                     }
                 }
 
-                if(numberTreasure== maxTreasure)
+                if (numberTreasure == maxTreasure)
                 {
                     states = estados.finish;
                 }
                 else
                 {
                     //Death();
-                    if (numberTreasure < maxTreasure) 
+                    if (numberTreasure < maxTreasure)
                     {
                         Death();
-                        if (lives == 0) 
+                        if (lives == 0)
                         {
                             dead = true;
                         }
@@ -129,12 +130,12 @@ public class LevelManager : MonoBehaviour
                     Debug.Log("Perdiste");
                     SceneManager.LoadScene("MenuPrincipal");
                 }
-                else 
-                { 
+                else
+                {
                     Debug.Log("Ganaste");
                     SceneManager.LoadScene("MenuPrincipal");
                 }
-               
+
                 break;
 
             case estados.quit:
@@ -148,7 +149,7 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator movimiento(string letra)
     {
-        if (letra!=" ")
+        if (letra != " ")
         {
             Vector3 destino = Vector3.zero;
 
@@ -175,8 +176,8 @@ public class LevelManager : MonoBehaviour
 
         }
 
-        
-        
+
+
         yield return new WaitForSeconds(1000);
         size++;
 
@@ -210,7 +211,7 @@ public class LevelManager : MonoBehaviour
             textoComandos.text += "s,";
             numberMovements++;
         }
-       
+
 
         Debug.Log(movement);
     }
@@ -223,7 +224,7 @@ public class LevelManager : MonoBehaviour
             textoComandos.text += "a,";
             numberMovements++;
         }
-        
+
 
         Debug.Log(movement);
     }
@@ -249,7 +250,7 @@ public class LevelManager : MonoBehaviour
     {
         lives--;
         livesText.text = lives.ToString();
-       
+
         if (lives != 0)
         {
             states = estados.loading;
@@ -258,7 +259,7 @@ public class LevelManager : MonoBehaviour
         {
             states = estados.finish;
         }
-        
+
     }
 
     public void Pause()
@@ -270,7 +271,7 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    public void Resume() 
+    public void Resume()
     {
         Time.timeScale = 1f;
         botonPausa.SetActive(true);
@@ -278,7 +279,7 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    public void Restart() 
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         botonPausa.SetActive(true);

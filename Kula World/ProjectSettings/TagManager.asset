@@ -6,11 +6,13 @@ TagManager:
   tags:
   - Tesoro
   - Mapa
-  - LevelManager
   - Audio
   - Idioma
   - TextoIdioma
   - Canvas
+  - IdiomaManager
+  - LevelManager
+  - LevelSelection
   layers:
   - Default
   - TransparentFX

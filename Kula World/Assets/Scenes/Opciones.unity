@@ -655,7 +655,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1356329626}
+      - m_Target: {fileID: 831365928}
         m_TargetAssemblyTypeName: Idioma, Assembly-CSharp
         m_MethodName: CambiarIdioma
         m_Mode: 5
@@ -839,6 +839,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606808266}
   m_CullTransparentMesh: 1
+--- !u!1 &831365926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831365927}
+  - component: {fileID: 831365928}
+  m_Layer: 0
+  m_Name: IdiomaScripts
+  m_TagString: IdiomaManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &831365927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831365926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 426.75403, y: 249, z: -11.888725}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &831365928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831365926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d098a904471384ba09e45b0c075828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BotonIdiomaESP: {fileID: 1804283081}
+  BotonIdiomaING: {fileID: 599069546}
 --- !u!1 &1033334634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,7 +1248,6 @@ GameObject:
   - component: {fileID: 1356329628}
   - component: {fileID: 1356329627}
   - component: {fileID: 1356329625}
-  - component: {fileID: 1356329626}
   - component: {fileID: 1356329632}
   m_Layer: 5
   m_Name: Canvas
@@ -1228,21 +1272,6 @@ MonoBehaviour:
   botonMusicaOff: {fileID: 1696721771}
   botonIdiomaESP: {fileID: 1804283081}
   botonIdiomaING: {fileID: 599069546}
---- !u!114 &1356329626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356329624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43d098a904471384ba09e45b0c075828, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BotonIdiomaESP: {fileID: 1804283081}
-  BotonIdiomaING: {fileID: 599069546}
-  idiomaActual: "Espa\xF1ol"
 --- !u!114 &1356329627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1931,7 +1960,7 @@ MonoBehaviour:
   "espa\xF1ol": Opciones
   ingles: Settings
   isBoton: 0
-  IdiomaGlobal: {fileID: 1356329626}
+  IdiomaGlobal: {fileID: 0}
 --- !u!1 &1696721771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,7 +2408,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1356329626}
+      - m_Target: {fileID: 831365928}
         m_TargetAssemblyTypeName: Idioma, Assembly-CSharp
         m_MethodName: CambiarIdioma
         m_Mode: 5

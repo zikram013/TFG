@@ -17,6 +17,7 @@ public class Texto : MonoBehaviour
     void Start()
     {
         NotificationCenterManager.Instance.AddObserver(OnNotification,"CambiarIdioma_");
+        CambiarIdioma_();
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class Texto : MonoBehaviour
 
     private void Awake()
     {
-        IdiomaGlobal = GameObject.Find("Canvas").GetComponent<Idioma>();
+        IdiomaGlobal = GameObject.Find("IdiomaScripts").GetComponent<Idioma>();
     }
 
     public void CambiarIdioma_() 
