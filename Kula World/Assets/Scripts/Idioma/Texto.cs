@@ -1,3 +1,4 @@
+using System;
 using NotificationCenter;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,34 +8,18 @@ using UnityEngine;
 public class Texto : MonoBehaviour
 {
 
-    public string español;
+    public string espanol;
     public string ingles;
     public bool isBoton;
 
-
-    public Idioma IdiomaGlobal;
+    //public ListaIdiomas lista;
+  
     // Start is called before the first frame update
     void Start()
     {
-        NotificationCenterManager.Instance.AddObserver(OnNotification,"CambiarIdioma_");
-        CambiarIdioma_();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void Awake()
-    {
-        IdiomaGlobal = GameObject.Find("IdiomaScripts").GetComponent<Idioma>();
-    }
-
-    public void CambiarIdioma_() 
-    {
-        //cambia a ingles
-        if (IdiomaGlobal.RetornaIdioma()=="Ingles")
+        //NotificationCenterManager.Instance.AddObserver(OnNotification,"CambiarIdioma_");
+        //CambiarIdioma_();
+        if (Idioma.Instance.RetornaIdioma()=="Ingles")
         {
             if (isBoton)
             {
@@ -45,15 +30,61 @@ public class Texto : MonoBehaviour
                 GetComponent<TMP_Text>().text = ingles;
             }
         }
-        else if (IdiomaGlobal.RetornaIdioma() == "Español") 
+        else if (Idioma.Instance.RetornaIdioma() == "Espanol") 
         {
             if (isBoton)
             {
-                GetComponentInChildren<TMP_Text>().text = español;
+                GetComponentInChildren<TMP_Text>().text = espanol;
             }
             else 
             {
-                GetComponent<TMP_Text>().text = español;
+                GetComponent<TMP_Text>().text = espanol;
+            }
+        }
+
+        
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void Awake()
+    {
+        Idioma.OnLanguageChange += CambiarIdioma;
+    }
+
+   void OnDestroy()
+    {
+        Idioma.OnLanguageChange -= CambiarIdioma;
+    }
+
+    public void CambiarIdioma(ListaIdiomas idioma) 
+    {
+        //cambia a ingles
+        if (Idioma.Instance.RetornaIdioma()=="Ingles")
+        {
+            if (isBoton)
+            {
+                GetComponentInChildren<TMP_Text>().text = ingles;
+            }
+            else 
+            {
+                GetComponent<TMP_Text>().text = ingles;
+            }
+        }
+        else if (Idioma.Instance.RetornaIdioma() == "Espanol") 
+        {
+            if (isBoton)
+            {
+                GetComponentInChildren<TMP_Text>().text = espanol;
+            }
+            else 
+            {
+                GetComponent<TMP_Text>().text = espanol;
             }
         }
         
@@ -61,8 +92,5 @@ public class Texto : MonoBehaviour
         
     }
 
-    private void OnNotification(Notification p_notification)
-    {
-        CambiarIdioma_();
-    }
+    
 }

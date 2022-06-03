@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
 
-        jugador = Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, new Vector3(0, 1, -2), Quaternion.EulerAngles(0, 360, 0));
+        jugador = Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, new Vector3(0, 0.5F, -2), Quaternion.EulerAngles(0, 360, 0));
         //jugador = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters;
 
         posicionInicial = jugador.transform.position;
@@ -86,15 +86,15 @@ public class LevelManager : MonoBehaviour
                 break;
             case estados.playing:
 
-
+                Debug.Log("longitud" + listMove.Length + " size:"+size);
 
                 if (size < listMove.Length - 1)
                 {
                     if (flag)
                     {
-                        flag = false;
+                        
                         StartCoroutine(movimiento(listMove[size]));
-
+                        flag = false;
                     }
                 }
 
@@ -102,7 +102,7 @@ public class LevelManager : MonoBehaviour
                 {
                     states = estados.finish;
                 }
-                else
+                /*else
                 {
                     //Death();
                     if (numberTreasure < maxTreasure)
@@ -114,10 +114,10 @@ public class LevelManager : MonoBehaviour
                         }
                     }
                 }
-                if (size == numberMovements)
+                /*if (size == numberMovements)
                 {
                     states = estados.loading;
-                }
+                }*/
 
 
                 break;
@@ -149,13 +149,16 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator movimiento(string letra)
     {
+        Debug.Log("Empieza corutina");
+        size++;
         if (letra != " ")
         {
             Vector3 destino = Vector3.zero;
 
-
+            Debug.Log("la letra es:" + letra);
             if (letra.Equals("w"))
             {
+                Debug.Log("entra en el movimiento");
                 destino = new Vector3(jugador.transform.position.x + 1, jugador.transform.position.y, jugador.transform.position.z);
             }
             if (letra.Equals("s"))
@@ -172,16 +175,16 @@ public class LevelManager : MonoBehaviour
             }
             Debug.Log(destino);
 
+            jugador.GetComponent<Animator>().SetBool("walking",true);
             jugador.transform.position = destino;
-
+            
         }
 
-
-
-        yield return new WaitForSeconds(1000);
-        size++;
-
-
+        
+        yield return new WaitForSeconds(1);
+        
+        Debug.Log("por aqí pasa");
+        jugador.GetComponent<Animator>().SetBool("walking",false);
         flag = true;
 
     }

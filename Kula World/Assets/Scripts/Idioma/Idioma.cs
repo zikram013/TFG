@@ -2,32 +2,37 @@ using NotificationCenter;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Idioma : MonoBehaviour
 {
-    public GameObject BotonIdiomaESP;
-    public GameObject BotonIdiomaING;
-    private static string idiomaActual = "Español";
+   
+    public ListaIdiomas ListaIdiomas;
+    public static event Action<ListaIdiomas> OnLanguageChange; 
+    public static Idioma Instance;
+
+    public  string idiomaActual = "Espanol";
     private void Start()
     {
-        
-        CambiarIdioma(idiomaActual);
+        //CambiarIdioma(idiomaActual);
     }
-
-    private void Update()
-    {
-        
-    }
-
     private void Awake()
     {
-        if (this.gameObject.activeSelf == true) 
+
+        if (Instance == null)
         {
-            DontDestroyOnLoad(transform.gameObject);
-        } 
+            Instance = this;
+            DontDestroyOnLoad(base.gameObject);
+        }
+        else
+        {
+            
+            Destroy(base.gameObject);
+            //Instance = this;
+        }
         
     }
 
@@ -36,12 +41,30 @@ public class Idioma : MonoBehaviour
         return (idiomaActual);
     }
 
-    public void CambiarIdioma(string idioma) 
+    public void CambiarIdioma(ListaIdiomas newIdioma) 
     {
-        Debug.Log(idioma);
-        idiomaActual = idioma;
-        Notification notification = new Notification(this, idioma);
-        NotificationCenterManager.Instance.PostNotification("CambiarIdioma_", notification);
-        //NotificationCenter.NotificationCenterManager.Instance.PostNotification("CambiarIdioma_");
+        switch (newIdioma)
+        {
+            case ListaIdiomas.Espanol:
+                idiomaActual = "Espanol";
+                break;
+            case ListaIdiomas.Ingles:
+                idiomaActual = "Ingles";
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(newIdioma), newIdioma, null);
+        }
+       
+        OnLanguageChange?.Invoke(newIdioma);
+       
     }
+
+    
+}
+
+
+public enum ListaIdiomas
+{
+    Espanol,
+    Ingles
 }

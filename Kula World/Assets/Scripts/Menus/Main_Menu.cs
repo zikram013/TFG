@@ -7,13 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class Main_Menu : MonoBehaviour
 {
-    public GameManager game;
+   
 
-    public string español;
-    public string ingles;
-    public bool isBoton;
-
-    public void LoadLevel(string name)
+   public void LoadLevel(string name)
     {
         SceneManager.LoadScene(name);
     }

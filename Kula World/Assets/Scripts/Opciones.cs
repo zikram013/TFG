@@ -10,15 +10,14 @@ public class Opciones : MonoBehaviour
     private AudioSource Audio;
 
     private Canvas canvas;
-
+    
 
     //Botones de audio
     public GameObject botonMusicaOn;
     public GameObject botonMusicaOff;
 
-    //Botones de sonido
-    public GameObject botonIdiomaESP;
-    public GameObject botonIdiomaING;
+
+   
 
 
     // Start is called before the first frame update
@@ -67,16 +66,13 @@ public class Opciones : MonoBehaviour
     //Add traduccion del juego
     public void controlBotonIdioma() 
     {
-        if (botonIdiomaING.activeSelf)
+        if (Idioma.Instance.idiomaActual == "Espanol")
         {
-            botonIdiomaING.SetActive(false);
-            
-            botonIdiomaESP.SetActive(true);
+            Idioma.Instance.CambiarIdioma(ListaIdiomas.Ingles);
         }
         else 
         {
-            botonIdiomaESP.SetActive(false);
-            botonIdiomaING.SetActive(true);
+            Idioma.Instance.CambiarIdioma(ListaIdiomas.Espanol);
         }
     }
 }
