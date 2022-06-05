@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 557900612}
   - component: {fileID: 557900611}
   - component: {fileID: 557900614}
+  - component: {fileID: 557900615}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -849,6 +850,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77276f7a7217d847be1a89c04035e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &557900615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557900609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Oveja
+  ingles: Sheep
+  isBoton: 1
 --- !u!1 &673571735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1251,7 @@ GameObject:
   - component: {fileID: 1007320458}
   - component: {fileID: 1007320460}
   - component: {fileID: 1007320459}
+  - component: {fileID: 1007320461}
   m_Layer: 5
   m_Name: CharacterText
   m_TagString: Untagged
@@ -1281,7 +1298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SELECT YOUR CHARACTER
+  m_text: Elige tu personaje
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: f629c6e43dba4bf38cb74d8860150664, type: 2}
@@ -1358,6 +1375,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007320457}
   m_CullTransparentMesh: 1
+--- !u!114 &1007320461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007320457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Elige tu personaje
+  ingles: Select your character
+  isBoton: 0
 --- !u!1 &1113719638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1644,7 @@ GameObject:
   - component: {fileID: 1221313354}
   - component: {fileID: 1221313353}
   - component: {fileID: 1221313356}
+  - component: {fileID: 1221313357}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -1745,6 +1778,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77276f7a7217d847be1a89c04035e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1221313357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221313351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Jugar
+  ingles: Play
+  isBoton: 1
 --- !u!1 &1289981765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,6 +2748,7 @@ GameObject:
   - component: {fileID: 2020324530}
   - component: {fileID: 2020324529}
   - component: {fileID: 2020324532}
+  - component: {fileID: 2020324533}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2845,6 +2894,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77276f7a7217d847be1a89c04035e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2020324533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020324527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Pato
+  ingles: Duck
+  isBoton: 1
 --- !u!1 &2062076464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,6 +2923,7 @@ GameObject:
   - component: {fileID: 2062076466}
   - component: {fileID: 2062076469}
   - component: {fileID: 2062076470}
+  - component: {fileID: 2062076471}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3020,3 +3085,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &2062076471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062076464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: "Ping\xFCino"
+  ingles: Penguin
+  isBoton: 1

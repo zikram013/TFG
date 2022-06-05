@@ -616,6 +616,7 @@ GameObject:
   - component: {fileID: 252112977}
   - component: {fileID: 252112976}
   - component: {fileID: 252112975}
+  - component: {fileID: 252112978}
   m_Layer: 5
   m_Name: BotonTutorial
   m_TagString: Untagged
@@ -737,6 +738,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252112973}
   m_CullTransparentMesh: 1
+--- !u!114 &252112978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252112973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Aprende a jugar
+  ingles: Learn To Play
+  isBoton: 1
 --- !u!1 &372822229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1083,7 @@ GameObject:
   - component: {fileID: 509720648}
   - component: {fileID: 509720650}
   - component: {fileID: 509720649}
+  - component: {fileID: 509720651}
   m_Layer: 5
   m_Name: Dificil
   m_TagString: Untagged
@@ -1190,6 +1207,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509720647}
   m_CullTransparentMesh: 1
+--- !u!114 &509720651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509720647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: "D\xEDficil"
+  ingles: Hard
+  isBoton: 0
 --- !u!1 &758982617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,6 +1576,7 @@ GameObject:
   - component: {fileID: 1333209734}
   - component: {fileID: 1333209736}
   - component: {fileID: 1333209735}
+  - component: {fileID: 1333209737}
   m_Layer: 5
   m_Name: Facil
   m_TagString: Untagged
@@ -1667,6 +1700,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333209733}
   m_CullTransparentMesh: 1
+--- !u!114 &1333209737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333209733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Facil
+  ingles: Easy
+  isBoton: 0
 --- !u!1 &1362567572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,6 +2122,7 @@ GameObject:
   - component: {fileID: 1718900473}
   - component: {fileID: 1718900475}
   - component: {fileID: 1718900474}
+  - component: {fileID: 1718900476}
   m_Layer: 5
   m_Name: Titulo
   m_TagString: Untagged
@@ -2197,6 +2246,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718900472}
   m_CullTransparentMesh: 1
+--- !u!114 &1718900476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718900472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Elige el nivel
+  ingles: Choose the level
+  isBoton: 0
 --- !u!1 &1755297877
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,6 +2272,7 @@ GameObject:
   - component: {fileID: 1755297878}
   - component: {fileID: 1755297880}
   - component: {fileID: 1755297879}
+  - component: {fileID: 1755297881}
   m_Layer: 5
   m_Name: Normal
   m_TagString: Untagged
@@ -2331,6 +2396,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755297877}
   m_CullTransparentMesh: 1
+--- !u!114 &1755297881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755297877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Normal
+  ingles: Medium
+  isBoton: 0
 --- !u!1 &1757091148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,6 +2602,7 @@ GameObject:
   - component: {fileID: 1955920114}
   - component: {fileID: 1955920116}
   - component: {fileID: 1955920115}
+  - component: {fileID: 1955920117}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -2645,6 +2726,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955920113}
   m_CullTransparentMesh: 1
+--- !u!114 &1955920117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955920113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Tutorial
+  ingles: Tutorial
+  isBoton: 0
 --- !u!1 &2058211530
 GameObject:
   m_ObjectHideFlags: 0

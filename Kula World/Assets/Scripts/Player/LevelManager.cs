@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour
     public GameObject botonPausa;
     public GameObject menuPausa;
     public GameObject mapeado;
+    public GameObject menuSiguienteNivel;
 
     private Vector3 posicionInicial;
     private Quaternion rotacionInicial;
@@ -101,6 +102,11 @@ public class LevelManager : MonoBehaviour
                 if (numberTreasure == maxTreasure)
                 {
                     states = estados.finish;
+                    menuSiguienteNivel.SetActive(true);
+                }
+                else
+                {
+                    states = estados.loading;
                 }
                 /*else
                 {
@@ -292,5 +298,13 @@ public class LevelManager : MonoBehaviour
     public void Quit()
     {
         states = estados.quit;
+    }
+
+    public void SiguienteNivel(string name)
+    {
+        Debug.Log("Fin nivel");
+        SceneManager.LoadScene(name);
+        menuSiguienteNivel.SetActive(false);
+        
     }
 }

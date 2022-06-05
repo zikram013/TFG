@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 717858222}
   - component: {fileID: 717858221}
   - component: {fileID: 717858220}
+  - component: {fileID: 717858223}
   m_Layer: 5
   m_Name: ComoJugar
   m_TagString: Untagged
@@ -550,6 +551,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717858218}
   m_CullTransparentMesh: 1
+--- !u!114 &717858223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717858218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Como jugar
+  ingles: How To Play
+  isBoton: 1
 --- !u!1 &720516070
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +578,7 @@ GameObject:
   - component: {fileID: 720516074}
   - component: {fileID: 720516073}
   - component: {fileID: 720516072}
+  - component: {fileID: 720516075}
   m_Layer: 5
   m_Name: Inicio
   m_TagString: Untagged
@@ -683,6 +700,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720516070}
   m_CullTransparentMesh: 1
+--- !u!114 &720516075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720516070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Inicio
+  ingles: Start
+  isBoton: 1
 --- !u!1 &812002361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,6 +1616,7 @@ GameObject:
   - component: {fileID: 1667085120}
   - component: {fileID: 1667085119}
   - component: {fileID: 1667085118}
+  - component: {fileID: 1667085121}
   m_Layer: 5
   m_Name: Final
   m_TagString: Untagged
@@ -1705,6 +1738,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667085116}
   m_CullTransparentMesh: 1
+--- !u!114 &1667085121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667085116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  espanol: Salir
+  ingles: Exit
+  isBoton: 1
 --- !u!1 &1673906295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,7 +2116,6 @@ MonoBehaviour:
   espanol: Opciones
   ingles: Options
   isBoton: 1
-  IdiomaGlobal: {fileID: 0}
 --- !u!1 &2034975618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,6 +2145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d098a904471384ba09e45b0c075828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListaIdiomas: 0
+  idiomaActual: Espanol
 --- !u!4 &2034975620
 Transform:
   m_ObjectHideFlags: 0

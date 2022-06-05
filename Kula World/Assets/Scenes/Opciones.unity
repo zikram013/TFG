@@ -275,7 +275,6 @@ MonoBehaviour:
   espanol: Audio
   ingles: Sound
   isBoton: 0
-  IdiomaGlobal: {fileID: 0}
 --- !u!1 &367473322
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +558,6 @@ MonoBehaviour:
   espanol: Volver
   ingles: Back
   isBoton: 1
-  IdiomaGlobal: {fileID: 0}
 --- !u!1 &599069546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,7 +1923,6 @@ MonoBehaviour:
   espanol: Opciones
   ingles: Settings
   isBoton: 0
-  IdiomaGlobal: {fileID: 0}
 --- !u!1 &1696721771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,7 +2274,6 @@ MonoBehaviour:
   espanol: idioma
   ingles: language
   isBoton: 0
-  IdiomaGlobal: {fileID: 0}
 --- !u!1 &1804283081
 GameObject:
   m_ObjectHideFlags: 0
