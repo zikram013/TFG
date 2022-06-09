@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &49986000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +221,8 @@ MonoBehaviour:
   botonPausa: {fileID: 2134163722}
   menuPausa: {fileID: 1676509059}
   mapeado: {fileID: 602738336}
-  menuSiguienteNivel: {fileID: 0}
+  menuSiguienteNivel: {fileID: 120725269}
+  InicializaPosicion: {x: 0, y: 0.5, z: 2}
 --- !u!4 &53675757
 Transform:
   m_ObjectHideFlags: 0
@@ -5217,8 +5218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7533234369526d64ca96c0c971141c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  espanol: Enhorabuena
-  ingles: Congratulations
+  espanol: Genial
+  ingles: Genial
   isBoton: 0
 --- !u!114 &1640255222
 MonoBehaviour:
@@ -5240,7 +5241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enhorabuena
+  m_text: Genial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}

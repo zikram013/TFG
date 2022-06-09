@@ -26,6 +26,8 @@ public class LevelManager : MonoBehaviour
     public GameObject menuPausa;
     public GameObject mapeado;
     public GameObject menuSiguienteNivel;
+    public Vector3 InicializaPosicion;//new Vector3(0, 0.5F, -2)
+    
 
     private Vector3 posicionInicial;
     private Quaternion rotacionInicial;
@@ -36,15 +38,23 @@ public class LevelManager : MonoBehaviour
     private bool flag = true;
     private bool final = false;
     private bool dead = false;
+    private GameObject[] MapaCubos;
+    private List<Vector3> MapaCoordenadas;
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        jugador = Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, new Vector3(0, 0.5F, -2), Quaternion.EulerAngles(0, 360, 0));
+        jugador = Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, InicializaPosicion, Quaternion.EulerAngles(0, 360, 0));
         //jugador = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters;
 
+        MapaCubos = GameObject.FindGameObjectsWithTag("Mapa");
+        foreach (var mapa in MapaCubos)
+        {
+            MapaCoordenadas.Add(mapa.transform.position);
+        }
+        
         posicionInicial = jugador.transform.position;
         rotacionInicial = jugador.transform.rotation;
         maxTreasure = tesoro.Length;
@@ -87,59 +97,62 @@ public class LevelManager : MonoBehaviour
                 break;
             case estados.playing:
 
-                Debug.Log("longitud" + listMove.Length + " size:"+size);
-
+             
+                Debug.Log(mapeado.transform.position);
                 if (size < listMove.Length - 1)
                 {
                     if (flag)
                     {
                         
                         StartCoroutine(movimiento(listMove[size]));
+                       
                         flag = false;
+                    
                     }
                 }
-
+                Debug.Log("Finalizacion de la corutina");
+                //Control del movimiento
                 if (numberTreasure == maxTreasure)
                 {
                     states = estados.finish;
-                    menuSiguienteNivel.SetActive(true);
+                    
+                }
+
+                if (lives >= 1)
+                {
+                   
+                    if (numberTreasure < maxTreasure && flag == false && size == listMove.Length-1)
+                    {
+                        lives--;
+                        states = estados.loading;
+                    }
+                    else
+                    {
+                    }
+
                 }
                 else
                 {
-                    states = estados.loading;
+                    dead = true;
+                    states = estados.finish;
                 }
-                /*else
-                {
-                    //Death();
-                    if (numberTreasure < maxTreasure)
-                    {
-                        Death();
-                        if (lives == 0)
-                        {
-                            dead = true;
-                        }
-                    }
-                }
-                /*if (size == numberMovements)
-                {
-                    states = estados.loading;
-                }*/
 
+             
 
                 break;
             case estados.paused:
                 break;
             case estados.finish:
-                //TODO: Realziar un condicional para ganar o perder
+               
                 if (dead)
                 {
                     Debug.Log("Perdiste");
-                    SceneManager.LoadScene("MenuPrincipal");
+                    menuSiguienteNivel.SetActive(true);
                 }
                 else
                 {
                     Debug.Log("Ganaste");
-                    SceneManager.LoadScene("MenuPrincipal");
+                    menuSiguienteNivel.SetActive(true);
                 }
 
                 break;
@@ -155,44 +168,63 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator movimiento(string letra)
     {
-        Debug.Log("Empieza corutina");
+      
         size++;
         if (letra != " ")
         {
             Vector3 destino = Vector3.zero;
+            Quaternion destinoRotacion = Quaternion.EulerAngles(0,0,0);
 
             Debug.Log("la letra es:" + letra);
             if (letra.Equals("w"))
             {
                 Debug.Log("entra en el movimiento");
                 destino = new Vector3(jugador.transform.position.x + 1, jugador.transform.position.y, jugador.transform.position.z);
+                if (jugador.transform.rotation.y != 360)
+                {
+                    destinoRotacion = Quaternion.EulerAngles(0,360,0);
+                }
+                
             }
             if (letra.Equals("s"))
             {
                 destino = new Vector3(jugador.transform.position.x - 1, jugador.transform.position.y, jugador.transform.position.z);
+                if (jugador.transform.rotation.y != -360)
+                {
+                    destinoRotacion = Quaternion.EulerAngles(0,-360,0);
+                }
             }
             if (letra.Equals("d"))
             {
                 destino = new Vector3(jugador.transform.position.x, jugador.transform.position.y, jugador.transform.position.z - 1);
+                destinoRotacion = Quaternion.EulerAngles(0,jugador.transform.rotation.y-45,0);
             }
             if (letra.Equals("a"))
             {
                 destino = new Vector3(jugador.transform.position.x, jugador.transform.position.y, jugador.transform.position.z + 1);
+                destinoRotacion = Quaternion.EulerAngles(0,jugador.transform.rotation.y+45,0);
             }
             Debug.Log(destino);
 
             jugador.GetComponent<Animator>().SetBool("walking",true);
             jugador.transform.position = destino;
-            
+            jugador.transform.rotation = destinoRotacion;
+
         }
 
         
         yield return new WaitForSeconds(1);
         
-        Debug.Log("por aqí pasa");
         jugador.GetComponent<Animator>().SetBool("walking",false);
         flag = true;
 
+        Vector3 aux = new Vector3(jugador.transform.position.x, jugador.transform.position.y - 0.5F,
+            jugador.transform.position.z); 
+        if (!MapaCoordenadas.Contains(aux))
+        {
+            lives--;
+            states = estados.loading;
+        }
     }
 
 
