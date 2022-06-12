@@ -8,6 +8,7 @@ public class PlayerSelector : MonoBehaviour
 
     public Image[] selectionBoxes;
     public GameObject[] prefabs;
+    
     // Start is called before the first frame update
     void Start()
     {

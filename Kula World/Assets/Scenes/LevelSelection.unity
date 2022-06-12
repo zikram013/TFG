@@ -926,6 +926,12 @@ MonoBehaviour:
   botonPausa: {fileID: 0}
   menuPausa: {fileID: 0}
   mapeado: {fileID: 0}
+  menuSiguienteNivel: {fileID: 0}
+  InicializaPosicion: {x: 0, y: 0, z: 0}
+  botonGanar: {fileID: 0}
+  botonPerder: {fileID: 0}
+  textoDerrota: {fileID: 0}
+  textoVictoria: {fileID: 0}
 --- !u!4 &381064082
 Transform:
   m_ObjectHideFlags: 0
@@ -1313,7 +1319,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: NivelUnoPrincipiante
+          m_StringArgument: CharacterSelection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &758982620

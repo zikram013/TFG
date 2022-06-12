@@ -8,7 +8,7 @@ public class GiroMoneda : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
 
@@ -24,6 +24,7 @@ public class GiroMoneda : MonoBehaviour
         {
             GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>().numberTreasure++;
             gameObject.SetActive(false);
+            
         }
     }
 

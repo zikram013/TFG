@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelSelection : MonoBehaviour
 {
     // Start is called before the first frame update
+    //GameObjects de todos los botones y almacenar la variable
     void Start()
     {
         
@@ -19,6 +20,7 @@ public class LevelSelection : MonoBehaviour
 
     public void LoadLevel(string name)
     {
+       
         SceneManager.LoadScene(name);
     }
 

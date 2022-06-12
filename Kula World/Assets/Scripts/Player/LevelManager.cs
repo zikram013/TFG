@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -27,6 +28,11 @@ public class LevelManager : MonoBehaviour
     public GameObject mapeado;
     public GameObject menuSiguienteNivel;
     public Vector3 InicializaPosicion;//new Vector3(0, 0.5F, -2)
+    public GameObject botonGanar;
+    public GameObject botonPerder;
+    public GameObject textoDerrota;
+    public GameObject textoVictoria;
+    
     
 
     private Vector3 posicionInicial;
@@ -40,40 +46,46 @@ public class LevelManager : MonoBehaviour
     private bool dead = false;
     private GameObject[] MapaCubos;
     private List<Vector3> MapaCoordenadas;
+    private int numeroTesorosActual;
+   
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        jugador = Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, InicializaPosicion, Quaternion.EulerAngles(0, 360, 0));
-        //jugador = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters;
-
-        MapaCubos = GameObject.FindGameObjectsWithTag("Mapa");
+        jugador = Instantiate(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().characters, new Vector3(0,0,0), Quaternion.EulerAngles(0, 360, 0));
+        /*MapaCubos = GameObject.FindGameObjectsWithTag("Mapa");
         foreach (var mapa in MapaCubos)
         {
             MapaCoordenadas.Add(mapa.transform.position);
-        }
+        }*/
+        
+        
         
         posicionInicial = jugador.transform.position;
         rotacionInicial = jugador.transform.rotation;
         maxTreasure = tesoro.Length;
+        textoComandos.text = "";
         states = estados.loading;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         switch (states)
         {
             case estados.loading:
+                
                 foreach (GameObject tes in tesoro)
                 {
                     tes.SetActive(true);
                 }
-                jugador.transform.position = posicionInicial;
+                jugador.transform.position = InicializaPosicion;
                 jugador.transform.rotation = rotacionInicial;
                 tesoro = GameObject.FindGameObjectsWithTag("Tesoro");
+
                 maxTreasure = tesoro.Length;
                 textoComandos.text = " ";
                 numberTreasure = 0;
@@ -82,8 +94,8 @@ public class LevelManager : MonoBehaviour
                 final = false;
                 movement = "";
                 livesText.text = lives.ToString();
-                states = estados.commands;
                 dead = false;
+                states = estados.commands;
                 break;
             case estados.commands:
 
@@ -114,6 +126,15 @@ public class LevelManager : MonoBehaviour
                 //Control del movimiento
                 if (numberTreasure == maxTreasure)
                 {
+                    int contador = 0;
+                    while (contador < 3)
+                    {
+                        jugador.GetComponent<Animator>().SetBool("jumping",true);
+                        contador++;
+                        jugador.GetComponent<Animator>().SetBool("jumping",false);
+                    }
+
+                    
                     states = estados.finish;
                     
                 }
@@ -148,17 +169,24 @@ public class LevelManager : MonoBehaviour
                 {
                     Debug.Log("Perdiste");
                     menuSiguienteNivel.SetActive(true);
+                    botonPerder.SetActive(true);
+                    textoDerrota.SetActive(true);
+                    
                 }
                 else
                 {
                     Debug.Log("Ganaste");
                     menuSiguienteNivel.SetActive(true);
+                    botonGanar.SetActive(true);
+                    textoVictoria.SetActive(true);
                 }
 
                 break;
 
             case estados.quit:
                 SceneManager.LoadScene("MenuPrincipal");
+                posicionInicial = InicializaPosicion;
+
                 break;
             default:
                 break;
@@ -176,7 +204,7 @@ public class LevelManager : MonoBehaviour
             Quaternion destinoRotacion = Quaternion.EulerAngles(0,0,0);
 
             Debug.Log("la letra es:" + letra);
-            if (letra.Equals("w"))
+            if (letra.Equals("↑"))
             {
                 Debug.Log("entra en el movimiento");
                 destino = new Vector3(jugador.transform.position.x + 1, jugador.transform.position.y, jugador.transform.position.z);
@@ -186,7 +214,7 @@ public class LevelManager : MonoBehaviour
                 }
                 
             }
-            if (letra.Equals("s"))
+            if (letra.Equals("↓"))
             {
                 destino = new Vector3(jugador.transform.position.x - 1, jugador.transform.position.y, jugador.transform.position.z);
                 if (jugador.transform.rotation.y != -360)
@@ -194,12 +222,12 @@ public class LevelManager : MonoBehaviour
                     destinoRotacion = Quaternion.EulerAngles(0,-360,0);
                 }
             }
-            if (letra.Equals("d"))
+            if (letra.Equals("→"))
             {
                 destino = new Vector3(jugador.transform.position.x, jugador.transform.position.y, jugador.transform.position.z - 1);
                 destinoRotacion = Quaternion.EulerAngles(0,jugador.transform.rotation.y-45,0);
             }
-            if (letra.Equals("a"))
+            if (letra.Equals("←"))
             {
                 destino = new Vector3(jugador.transform.position.x, jugador.transform.position.y, jugador.transform.position.z + 1);
                 destinoRotacion = Quaternion.EulerAngles(0,jugador.transform.rotation.y+45,0);
@@ -209,6 +237,8 @@ public class LevelManager : MonoBehaviour
             jugador.GetComponent<Animator>().SetBool("walking",true);
             jugador.transform.position = destino;
             jugador.transform.rotation = destinoRotacion;
+            
+            
 
         }
 
@@ -217,14 +247,14 @@ public class LevelManager : MonoBehaviour
         
         jugador.GetComponent<Animator>().SetBool("walking",false);
         flag = true;
-
+/*
         Vector3 aux = new Vector3(jugador.transform.position.x, jugador.transform.position.y - 0.5F,
             jugador.transform.position.z); 
         if (!MapaCoordenadas.Contains(aux))
         {
             lives--;
             states = estados.loading;
-        }
+        }*/
     }
 
 
@@ -236,8 +266,8 @@ public class LevelManager : MonoBehaviour
 
         if (numberMovements < maxMovements)
         {
-            movement += "w,";
-            textoComandos.text += "w,";
+            movement += "↑,";
+            textoComandos.text += "↑,";
             numberMovements++;
         }
 
@@ -248,8 +278,8 @@ public class LevelManager : MonoBehaviour
     {
         if (numberMovements < maxMovements)
         {
-            movement += "s,";
-            textoComandos.text += "s,";
+            movement += "↓,";
+            textoComandos.text += "↓,";
             numberMovements++;
         }
 
@@ -261,8 +291,8 @@ public class LevelManager : MonoBehaviour
 
         if (numberMovements < maxMovements)
         {
-            movement += "a,";
-            textoComandos.text += "a,";
+            movement += "←,";
+            textoComandos.text += "←,";
             numberMovements++;
         }
 
@@ -274,8 +304,8 @@ public class LevelManager : MonoBehaviour
 
         if (numberMovements < maxMovements)
         {
-            movement += "d,";
-            textoComandos.text += "d,";
+            movement += "→,";
+            textoComandos.text += "→,";
             numberMovements++;
         }
 
@@ -323,6 +353,7 @@ public class LevelManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //states = estados.loading;
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
     }

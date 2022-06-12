@@ -1310,7 +1310,6 @@ GameObject:
   - component: {fileID: 9582806}
   - component: {fileID: 4556209868242637697}
   - component: {fileID: 6776857500413823821}
-  - component: {fileID: 8034920653906692381}
   m_Layer: 0
   m_Name: penguin
   m_TagString: Player
@@ -1326,8 +1325,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175374}
   m_LocalRotation: {x: 0, y: 0, z: -0, w: -1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_LocalPosition: {x: -0, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 475372}
   - {fileID: 475370}
@@ -1345,7 +1344,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175374}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: b2f29bedc01897d448f4f3e00b5e406d, type: 3}
+  m_Avatar: {fileID: 9000000, guid: d3db9fd334104074c95a9f6ee425513d, type: 3}
   m_Controller: {fileID: 9100000, guid: 53eb8f0daba97d94abaa8f0725668898, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -1374,21 +1373,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8034920653906692381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b54ceefd4b3c6409818f9389d91bf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 5.54, z: 0}
 --- !u!1 &193146
 GameObject:
   m_ObjectHideFlags: 0

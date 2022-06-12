@@ -19,7 +19,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            
+            if (Instance.characters != null)
+            {
+                Instance.characters = null;
+            }
+
             Destroy(base.gameObject);
             //Instance = this;
         }
