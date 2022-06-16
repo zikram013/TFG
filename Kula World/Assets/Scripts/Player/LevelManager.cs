@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -184,8 +185,13 @@ public class LevelManager : MonoBehaviour
                 break;
 
             case estados.quit:
+                //OnDestroy();
+                Time.timeScale = 1f;
+                //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+                menuSiguienteNivel.SetActive(false);
+                menuPausa.SetActive(false);
                 SceneManager.LoadScene("MenuPrincipal");
-                posicionInicial = InicializaPosicion;
+                //posicionInicial = InicializaPosicion;
 
                 break;
             default:
@@ -352,10 +358,14 @@ public class LevelManager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //lives = 3;
         //states = estados.loading;
+        Time.timeScale = 1f;
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
+        menuSiguienteNivel.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 
     public void Quit()
@@ -369,5 +379,10 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(name);
         menuSiguienteNivel.SetActive(false);
         
+    }
+
+    private void OnDestroy()
+    {
+       DestroyImmediate(this,true);
     }
 }
