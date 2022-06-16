@@ -140,7 +140,7 @@ public class LevelManager : MonoBehaviour
                     
                 }
 
-                if (lives >= 1)
+                if (lives >= 0)
                 {
                    
                     if (numberTreasure < maxTreasure && flag == false && size == listMove.Length-1)
@@ -204,6 +204,7 @@ public class LevelManager : MonoBehaviour
     {
       
         size++;
+        
         if (letra != " ")
         {
             Vector3 destino = Vector3.zero;
@@ -231,12 +232,51 @@ public class LevelManager : MonoBehaviour
             if (letra.Equals("→"))
             {
                 destino = new Vector3(jugador.transform.position.x, jugador.transform.position.y, jugador.transform.position.z - 1);
-                destinoRotacion = Quaternion.EulerAngles(0,jugador.transform.rotation.y-45,0);
+                if (size == 1)
+                {
+                    Debug.Log("primer Comando");
+                    destinoRotacion = Quaternion.EulerAngles(0,jugador.transform.rotation.y-45,0);
+                }
+
+                if (size > 1)
+                {
+                    if (listMove[size - 2] != letra )
+                    {
+                        destinoRotacion = Quaternion.EulerAngles(0,jugador.transform.rotation.y-45,0);
+                    }
+                    else
+                    {
+                        destinoRotacion = jugador.transform.rotation;
+                    }
+                }
+
+                
+
+
             }
             if (letra.Equals("←"))
             {
                 destino = new Vector3(jugador.transform.position.x, jugador.transform.position.y, jugador.transform.position.z + 1);
-                destinoRotacion = Quaternion.EulerAngles(0,jugador.transform.rotation.y+45,0);
+                if (size == 1)
+                {
+                    destinoRotacion = Quaternion.EulerAngles(0,jugador.transform.rotation.y+45,0);
+                }
+
+                if (size > 1)
+                {
+                    if (listMove[size - 2] != letra )
+                    {
+                        destinoRotacion = Quaternion.EulerAngles(0,jugador.transform.rotation.y+45,0);
+                    }
+                    else
+                    {
+                        destinoRotacion = jugador.transform.rotation;
+                    }
+                }
+
+                
+
+
             }
             Debug.Log(destino);
 
@@ -277,8 +317,7 @@ public class LevelManager : MonoBehaviour
             numberMovements++;
         }
 
-
-        Debug.Log(movement);
+        
     }
     public void atras()
     {
@@ -289,8 +328,7 @@ public class LevelManager : MonoBehaviour
             numberMovements++;
         }
 
-
-        Debug.Log(movement);
+        
     }
     public void izquierda()
     {
@@ -302,8 +340,7 @@ public class LevelManager : MonoBehaviour
             numberMovements++;
         }
 
-
-        Debug.Log(movement);
+        
     }
     public void derecha()
     {
@@ -314,8 +351,7 @@ public class LevelManager : MonoBehaviour
             textoComandos.text += "→,";
             numberMovements++;
         }
-
-        Debug.Log(movement);
+        
     }
 
     public void jugar()
@@ -381,8 +417,5 @@ public class LevelManager : MonoBehaviour
         
     }
 
-    private void OnDestroy()
-    {
-       DestroyImmediate(this,true);
-    }
+   
 }
