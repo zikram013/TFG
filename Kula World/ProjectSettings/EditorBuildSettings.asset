@@ -44,4 +44,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dificil/NivelDosDificil.unity
     guid: d6bd7abe20f5a7747b4e9479d9465364
-  m_configObjects: {}
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: b09a1618d99edd2489d038109dd39e5f, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: d3987961ada780b419ec4c97e301049b, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2aeb9c12751c7dc4dbd12a08cb2a7d21, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6bb89c0a0a1e44a4da9fcbe9d61605c9, type: 2}
