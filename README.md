@@ -14,3 +14,5 @@ La Realidad Aumentada se usa para mostrar el nivel en cualquier superficie a tra
 En posibles mejoras futuras del juego,  se puede implementar un movimiento mucho mas fluido de los personajes dado que ahora se hace de forma secuencial y no se aprovechan las animaciones de los personajes para el movimiento, solo se usan para disimular ese movimiento de saltitos que produce hacerlo de esta forma. Otra de las mejoras que se podría implementar sería el desblqueo por niveles dado que ahora se encuentran todos los niveles disponibles desde el principio. Incluir tesoros personalizados dado que ahora mismo solo hay un único tesoro a recoger para todos los personajes. Incluir un temporizador para que el usuario tenga un tiempo determinado para pensar que recorrido realizar para obtener todos los tesoros.
 
 Este proyecto queda abierto para todo aquel que quiera aportar, contribuir o simplemente aprender determinados conceptos en forma de nociones básicas para sus proyectos personales.
+
+Para mas infomación o lectura del TFG leer el PDF que se encuentra en la raíz del proyecto.
